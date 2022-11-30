@@ -1,4 +1,5 @@
 import cv2
+import numpy as np
 #I was not able to upload it with the virtual env so i am uploading the code itself
 #and i am not able to figure out what to write in the last challange so please help ma'am
 
@@ -22,7 +23,7 @@ while True:
     # Extract bounding boxes for any bodies identified
     for (x,y,w,h) in bodies:
        cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
-
+       cv2.imshow('cap',cap)
     if cv2.waitKey(1) == 32: #32 is the Space Key
         break
 
